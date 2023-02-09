@@ -1,0 +1,9 @@
+version: 1.2
+workflows:
+  - subclass: WDL
+    primaryDescriptorPath: /fastqc.wdl
+    testParameterFiles:
+      - /TB_from_SRA.json
+    authors:
+      - orcid: 0000-0003-4896-1858
+    name: fastqc

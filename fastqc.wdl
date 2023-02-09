@@ -1,6 +1,6 @@
 version 1.0
 
-workflow FastQC {
+workflow FastqcWF {
 	input {
 		Array[File] fastqs
 	}
@@ -26,7 +26,8 @@ task fastqc {
 	Int finalDiskSize = addldisk + ceil(size(fastqs))
 
 	command <<<
-		fastqc ~{sep=" " fastqs}
+		mkdir outs
+		fastqc -o outputs ~{sep=" " fastqs}
 	>>>
 
 	runtime {
@@ -38,7 +39,7 @@ task fastqc {
 	}
 
 	output {
-		Array[File] reports = glob("*.html")
+		Array[File] reports = glob("outputs/*.html")
 	}
 	
 }
