@@ -13,6 +13,10 @@ workflow FastqcWF {
 	output {
 		Array[File] reports = fastqc.reports
 	}
+
+	meta {
+		author: "Ash O'Farrell"
+	}
 }
 
 task fastqc {
