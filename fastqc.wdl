@@ -31,7 +31,7 @@ task fastqc {
 
 	runtime {
 		cpu: cpu
-		docker: "ashedpotatoes/iqbal-unofficial-clockwork-mirror:v0.11.3"
+		docker: "biocontainers/fastqc:v0.11.9_cv8"
 		disks: "local-disk " + finalDiskSize + " SSD"
 		memory: "${memory} GB"
 		preemptible: "${preempt}"
