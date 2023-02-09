@@ -27,7 +27,7 @@ task fastqc {
 		Int memory = 8
 		Int preempt = 1 
 	}
-	Int finalDiskSize = addldisk + ceil(size(fastqs))
+	Int finalDiskSize = addldisk + ceil(size(fastqs), "GB")
 
 	command <<<
 		mkdir outs
