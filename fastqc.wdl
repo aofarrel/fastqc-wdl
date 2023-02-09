@@ -30,7 +30,7 @@ task fastqc {
 	Int finalDiskSize = addldisk + ceil(size(fastqs, "GB"))
 
 	command <<<
-		mkdir outs
+		mkdir outputs
 		fastqc -o outputs ~{sep=" " fastqs}
 	>>>
 
