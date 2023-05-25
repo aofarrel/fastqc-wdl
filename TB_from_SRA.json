@@ -1,3 +1,4 @@
 {
-  "FastqcWF.fastqs":["/Users/ash/Downloads/_fastqs_/SAMN18648259_SRR14164868_1.fastq", "/Users/ash/Downloads/_fastqs_/SAMN18648679_SRR14164447_1.fastq"]
+  "FastqcWF.fastqs":["../tb_profiler/examples/inputs/SAMEA14493485_ERR9806894_1.fastq", "../tb_profiler/examples/inputs/SAMEA14493485_ERR9806894_2.fastq"],
+  "FastqcWF.limits": "./data/limits.txt"
 }

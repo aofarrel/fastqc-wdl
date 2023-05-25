@@ -3,11 +3,13 @@ version 1.0
 workflow FastqcWF {
 	input {
 		Array[File] fastqs
+		File? limits
 	}
 
 	call fastqc {
 		input:
-			fastqs = fastqs
+			fastqs = fastqs,
+			limits = limits
 	}
 
 	output {
@@ -22,6 +24,7 @@ workflow FastqcWF {
 task fastqc {
 	input {
 		Array[File] fastqs
+		File? limits
 		Int addldisk = 10
 		Int cpu = 4
 		Int memory = 8
@@ -31,7 +34,12 @@ task fastqc {
 
 	command <<<
 		mkdir outputs
-		fastqc -o outputs ~{sep=" " fastqs}
+		if [[ "~{limits}" != "" ]]
+		then
+			fastqc -o outputs -l ~{limits} ~{sep=" " fastqs}
+		else
+			fastqc -o outputs ~{sep=" " fastqs}
+		fi
 	>>>
 
 	runtime {
