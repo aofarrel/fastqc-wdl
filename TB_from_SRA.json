@@ -1,4 +1,3 @@
 {
-  "FastqcWF.fastqs":["../tb_profiler/examples/inputs/SAMEA14493485_ERR9806894_1.fastq", "../tb_profiler/examples/inputs/SAMEA14493485_ERR9806894_2.fastq"],
-  "FastqcWF.limits": "./data/limits.txt"
+  "FastqcWF.fastqs":["../tb_profiler/examples/inputs/SAMEA14493485_ERR9806894_1.fastq", "../tb_profiler/examples/inputs/SAMEA14493485_ERR9806894_2.fastq"]
 }
