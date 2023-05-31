@@ -1,0 +1,4 @@
+{
+  "FastqcWF.fastqs": ["../myco/inputs/data/fastqs/ERR7057565_tiny_1.fq", "../myco/inputs/data/fastqs/ERR7057565_tiny_2.fq"],
+  "FastqcWF.limits": "./data/limits.txt"
+}

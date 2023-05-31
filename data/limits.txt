@@ -1,6 +1,5 @@
-# This is an example of a limits.txt file you can use in
-# this workflow. It does not necessarily match the default
-# limits.txt used by fastqc, but it is based upon it.
+# This is an example of a limits.txt file that skips the
+# GC content check.
 
 # For each of the modules you can choose to not run that
 # module at all by setting the value below to 1 for the
@@ -11,7 +10,7 @@ n_content 			ignore 		0
 overrepresented 	ignore 		0
 quality_base 		ignore 		0
 sequence 			ignore 		0
-gc_sequence			ignore 		0
+gc_sequence			ignore 		1
 quality_sequence	ignore		0
 tile				ignore		0
 sequence_length		ignore		0
